@@ -112,7 +112,7 @@ async function checkVersion() {
 }
 
 if (
-    import.meta.env.VITE_API_URL === "https://api.revolt.chat" ||
+    import.meta.env.VITE_API_URL === "https://api.revolt.chat/0.8" ||
     import.meta.env.VITE_API_URL === "https://app.revolt.chat/api"
 ) {
     // Check for critical updates hourly
