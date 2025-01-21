@@ -112,7 +112,7 @@ export default defineConfig({
             __GIT_BRANCH__: getGitBranch(),
             __APP_VERSION__: getVersion(),
             preventAssignment: true,
-        }) as any,
+        }),
     ],
     build: {
         sourcemap: true,
