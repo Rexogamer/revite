@@ -1,9 +1,8 @@
 import { ChevronDown } from "@styled-icons/boxicons-regular";
-import { isEqual } from "lodash";
+import isEqual from "lodash.isequal";
 import { observer } from "mobx-react-lite";
 import { Virtuoso } from "react-virtuoso";
-import { Member } from "revolt.js";
-import { Server } from "revolt.js";
+import { Member, Server } from "revolt.js";
 
 import styles from "./Panes.module.scss";
 import { Text } from "preact-i18n";
@@ -146,10 +145,10 @@ export const Members = ({ server }: Props) => {
         () =>
             query
                 ? data?.filter((x) =>
-                      x.user?.username
-                          .toLowerCase()
-                          .includes(query.toLowerCase()),
-                  )
+                    x.user?.username
+                        .toLowerCase()
+                        .includes(query.toLowerCase()),
+                )
                 : data,
         [data, query],
     );
