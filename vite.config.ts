@@ -128,4 +128,7 @@ export default defineConfig({
     resolve: {
         preserveSymlinks: true,
     },
+    server: {
+        allowedHosts: [".revolt.chat"],
+    },
 });
